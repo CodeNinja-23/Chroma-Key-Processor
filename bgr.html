@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Green Screen Replacement</title>
+    <style>
+        /* #backgroundVideo{
+            z-index: 1;
+        }
+        #canvas{
+            z-index: 2;
+        } */
+
+        #video{
+            width: 100%;
+        }
+
+        .video-background, .video-foreground {
+            position: absolute;
+            
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-foreground {
+            mix-blend-mode: normal; /* Adjust blend mode as needed */
+        }
+    </style>
+</head>
+<body>
+
+    
+<div><video id="video" src="/videos/cat.mp4" autoplay loop muted playsinline></video>
+    <div class="vd"></div>
+
+    <video class = "video-foreground" id="backgroundVideo" src="/videos/space.mp4" autoplay loop muted playsinline ></video>
+<canvas class = "video-foreground" id="canvas"></canvas>
+
+
+</div>
+
+
+<script src="app1.js"></script>
+</body>
+</html>
